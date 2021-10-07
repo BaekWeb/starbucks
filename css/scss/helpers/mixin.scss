@@ -1,0 +1,56 @@
+/*
+  믹스인
+*/
+// display
+@mixin setGrid($display, $col, $col_fr, $rows, $rows_fr, $gap) {
+  display: $display;
+  grid-template-columns: repeat($col, $col_fr);
+  grid-template-rows: repeat($rows, $rows_fr);
+  grid-gap: $gap;
+}
+@mixin setFlex($display, $jus, $align) {
+  display: $display;
+  justify-content: $jus;
+  align-items: $align;
+}
+// position
+@mixin setPosition($pos, $top, $right, $bottom, $left, $zIdx) {
+  position: $pos;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $zIdx;
+}
+// color
+$trans: transparent;
+$white: #f6f5ef;
+$beige: #ccc;
+$black: #111;
+$black2: #2C2A29;
+$black3: #282828;
+$green: #1e3932;
+
+
+// font
+@mixin font-x-s {
+  font-size: 12px;
+}
+@mixin font-s {
+  font-size: 13px;
+}
+@mixin font-s {
+  font-size: 14px;
+}
+@mixin font-m {
+  font-size: 15px;
+}
+@mixin font-m2 {
+  font-size: 16px;
+}
+@mixin font-l {
+  font-size: 17px;
+}
+@mixin font-x-l {
+  font-size: 26px;
+}
