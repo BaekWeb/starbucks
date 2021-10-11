@@ -6,9 +6,16 @@
 @import './base/reset';
 @import './base/style';
 
-/* helpers - 믹스인 & 미디어쿼리 */
+/* helpers - 믹스인 */
 @import './helpers/mixin';
 
 /* layout - 컴포넌트나 페이지 레이아웃 */
+@import './layout/header';
+@import './layout/sideMenu';
+@import './layout/visual';
+@import './layout/news';
+@import './layout/promotion_info';
 
 /* vander - 라이브러리 */
+@import './vander/swiper';
+

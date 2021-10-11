@@ -1,3 +1,64 @@
 /*
   반복되는 style
 */
+.wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+// 컨텐츠 width
+.header,
+section,
+.footer {
+  .content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+// btn
+.detail_btn {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: .5s;
+
+  a {
+    padding: 8px 28px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+
+// a 요소
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// title 안보이게
+.title {
+  position: absolute;
+  top: -1000%;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-indent: -10000px;
+  color: transparent;
+}
+
+
+// max-width - 640px
+@media (max-width: 640px) {
+  // btn
+  .detail_btn {
+    a {
+      padding: 8px 28px;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+}

@@ -24,12 +24,15 @@
 }
 // color
 $trans: transparent;
-$white: #f6f5ef;
-$beige: #ccc;
+$white: #ffffff;
+$white2: #ccc;
+$beige: #f6f5ef;
 $black: #111;
 $black2: #2C2A29;
 $black3: #282828;
 $green: #1e3932;
+$greend2: #64a70b;
+$greend3: #669900;
 
 
 // font
@@ -39,7 +42,7 @@ $green: #1e3932;
 @mixin font-s {
   font-size: 13px;
 }
-@mixin font-s {
+@mixin font-s2 {
   font-size: 14px;
 }
 @mixin font-m {
@@ -50,6 +53,9 @@ $green: #1e3932;
 }
 @mixin font-l {
   font-size: 17px;
+}
+@mixin font-l2 {
+  font-size: 24px;
 }
 @mixin font-x-l {
   font-size: 26px;

@@ -1,0 +1,308 @@
+/*
+  sideMenu style
+*/
+.sideMenu {
+  @include setPosition(fixed, 0,0,0,0, 1100);
+  background: rgba(0,0,0,0.7);
+  transform: translate(100%, 0);
+  transition: 0.5s;
+
+  &.open {
+    transform: translate(0%, 0);
+  }
+  .content {
+    @include setPosition(fixed,0,0,0,auto, 1100);
+    width: 70%;
+    background-color: $black;
+    .info {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      .search {
+        padding: 30px 0;
+        border-bottom: 1px solid $black;
+        background-color: $black2;
+        
+        form {
+          width: max-content;
+          margin: 0 auto;
+  
+          input {
+            height: 50px;
+            border-radius: 5px;
+  
+            &[type=search] {
+              width: 310px;
+            }
+            &[type=submit] {
+              @include font-l2;
+              width:  125px;
+              margin-left: 15px;
+              color: $white;
+              background-color: #666;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+  
+      // main
+      .main {
+        color: $white;
+  
+        > li {
+          &:nth-child(1) {
+            h3 {
+              background-color: $black2; 
+            }
+          }
+          &.on {
+            h3 a {  
+              &::after {
+                background: url(./../images/icon/mob_gnb_arrow_up_w.png) no-repeat center;
+                background-size: contain;
+              }
+            }
+          }
+          
+          h3 a {
+            @include font-x-l;
+            position: relative;
+            height: 75px;
+            padding: 0 40px 0 20px;
+            line-height: 75px;
+  
+            &::after {
+              @include setPosition(absolute,50%,40px,auto,auto,1100);
+              display: block;
+              content: "";
+              width: 20px;
+              height: 20px;
+              background: url(./../images/icon/mob_gnb_arrow_down_w.png) no-repeat center;
+              background-size: contain;
+              transform: translate(0, -50%);
+            }
+          }
+          // dropbox
+          .dropBox {
+            display: none;
+            
+            > li {
+              // drop icon
+              &.on {
+                h4 {
+                  &.icon {
+                    a {
+                      &::after {
+                        background: url(./../images/icon/mob_gnb_arrow_up_g.png) no-repeat center;
+                        background-size: contain;
+                      }
+                    }
+                  }
+                }
+              }
+  
+              h4 {
+                &.icon {
+                  a {
+                    &::after {
+                      @include setPosition(absolute,50%,40px,auto,auto,1100);
+                      display: block;
+                      content: "";
+                      width: 20px;
+                      height: 20px;
+                      background: url(./../images/icon/mob_gnb_arrow_down_g.png) no-repeat center;
+                      background-size: contain;
+                      transform: translate(0, -50%);
+                    }
+                  }
+                }
+  
+                a {
+                  @include font-l2;
+                  position: relative;
+                  height: 75px;
+                  padding: 0 40px;
+                  font-weight: 400;
+                  line-height: 75px;
+                }
+              }
+              // drop icon end
+              .item {
+                display: none;
+  
+                > li {
+                  height: 50px;
+                  line-height: 50px;
+                  background-color: #222222;
+                  > a {
+                    @include font-l;
+                    padding: 0 55px;
+                    color: #999;
+                  }
+                }
+              }
+            }
+          }
+          // dropbox end
+        }
+      }
+      // main end
+    }
+    .close {
+      @include setPosition(absolute,20px,auto,auto,-50px,1100);
+      transition: 1s;
+
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+// width - 481px ~ 660px
+@media screen and (min-width: 481px) and (max-width: 660px) {
+  .sideMenu {
+    .content {
+      .info {
+        .search {
+          form {
+            input {
+              &[type=search] {
+                width: 190px;
+              }
+              &[type=submit] {
+                @include font-l;
+                width:  100px;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+    
+        // main
+        .main {
+          > li {
+            h3 a {
+              @include font-l;
+              padding: 0 20px;
+            }
+            // dropbox
+            .dropBox {
+              > li {
+                // drop icon
+                h4 {
+                  a {
+                    @include font-l;
+                    padding: 0 40px;
+                  }
+                }
+                // drop icon end
+                .item {
+                  > li {
+                    > a {
+                      @include font-l;
+                    }
+                  }
+                }
+              }
+            }
+            // dropbox end
+          }
+        }
+        // main end
+      }
+    }
+  }
+}
+
+// max-width - 480px
+@media screen and (max-width: 480px) {
+  .sideMenu {
+    .content {
+      .info {
+        .search {
+          padding: 20px 0;
+          
+          form {
+            input {
+              height: 30px;
+    
+              &[type=search] {
+                width: 140px;
+              }
+              &[type=submit] {
+                @include font-s2;
+                width:  70px;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+    
+        // main
+        .main {
+          > li {            
+            h3 a {
+              @include font-s2;
+              position: relative;
+              height: 50px;
+              padding: 0 20px;
+              line-height: 50px;
+    
+              &::after {
+                width: 16px;
+                height: 16px;
+                right: 20px;
+              }
+            }
+            // dropbox
+            .dropBox {
+              > li {
+                // drop icon
+                h4 {
+                  &.icon {
+                    a {
+                      &::after {
+                        width: 16px;
+                        height: 16px;
+                        right: 20px;
+                      }
+                    }
+                  }
+    
+                  a {
+                    @include font-s2;
+                    height: 50px;
+                    padding: 0 20px;
+                    line-height: 50px;
+                  }
+                }
+                // drop icon end
+                .item {
+                  > li {
+                    height: 30px;
+                    line-height: 30px;
+                    > a {
+                      @include font-s2;
+                      padding: 0 30px;
+                    }
+                  }
+                }
+              }
+            }
+            // dropbox end
+          }
+        }
+        // main end
+      }
+      .close {
+        left: -40px;
+        a img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
