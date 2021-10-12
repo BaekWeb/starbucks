@@ -1,0 +1,230 @@
+/*
+  favorite style
+*/
+.favorite {
+  height: 800px;
+  background: url(./../images/common/fav_prod_bg_new.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  .content {
+    position: relative;
+    height: 100%;
+
+    .img,
+    .text {
+      @include setPosition(absolute, 50%, auto, auto, auto, 950);
+      transform: translate(0, -50%);
+    }
+    
+    .img {
+      right: -65px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text {
+      left: 20px;
+      color: $white;
+      text-align: right;
+
+      h3 {
+        margin-bottom: 30px;
+        span {
+          display: block;
+
+          &:nth-child(1) {
+            font-size: 105px;
+            letter-spacing: 3px;
+          }
+          &:nth-child(2) {
+            margin-top: -40px;
+            font-size: 82px;
+            letter-spacing: 5px;
+          }
+          &:nth-child(3) {
+            margin-top: -10px;
+            font-size: 44px;
+            font-weight: 600;
+            letter-spacing: 5px;
+          }
+        }
+      }
+
+      strong {
+        @include font-x-l;
+        font-weight: 400;
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      p {
+        @include font-m2;
+        margin-top: 10px;
+        line-height: 25px;
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      .detail_btn {
+        margin-top: 40px;
+        border-color: $white;
+
+        &:hover {
+          color: $black;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+// max-width - 1280px
+@media screen and (max-width: 1280px) {
+  .favorite {
+    .content {
+      .img {
+        width: 600px;
+        right: 3%;
+        top: 43%;
+      }
+    }
+  }
+}
+// width - 961px ~ 1100px
+@media screen and (min-width: 961px) and (max-width: 1100px) {
+  .favorite {
+    .content {
+      .img {
+        width: 560px;
+        right: 3%;
+        top: 50%;
+      }
+
+      .text {
+        h3 {
+          margin-bottom: 20px;
+          span {
+            display: block;
+  
+            &:nth-child(1) {
+              font-size: 78px;
+              letter-spacing: 6px;
+            }
+            &:nth-child(2) {
+              margin-top: -25px;
+              font-size: 60px;
+              letter-spacing: 7px;
+            }
+            &:nth-child(3) {
+              font-size: 32px;
+              font-weight: 700;
+              letter-spacing: 5px;
+            }
+          }
+        }
+  
+        strong {
+          font-size: 22px;
+  
+          span {
+            font-weight: 700;
+          }
+        }
+  
+        p {
+          @include font-s2;
+        }
+      }
+    }
+  }
+}
+
+// max-width - 960px
+@media screen and (max-width: 960px) {
+  .favorite {
+    height: 1100px;
+    background: url(./../images/common/mob_fav_prod_bg_new.jpg) no-repeat center -10px;
+    background-size: 100% auto;
+    background-attachment: initial;
+    
+    .content {
+      .img,
+      .text {
+        position: static;
+        transform: none;
+      }
+      
+      .img {
+        margin: 0 auto;
+        padding: 130px 0;
+      }
+
+      .text {
+        margin-top: 40px;
+        text-align: center;
+  
+        h3 {
+          display: none
+        }
+  
+        strong {
+          font-size: 32px;
+          text-shadow: 1px 1px 6px $black;
+        }
+  
+        p {
+          @include font-l;
+  
+          span {
+            &:last-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// max-width - 640px
+@media screen and (max-width: 640px) {
+  .favorite {
+    background-size: cover;
+    .content {
+      .img {
+        width: 410px;
+      }
+    }
+  }
+}
+// max-width - 480px
+@media screen and (max-width: 480px) {
+  .favorite {
+    height: 700px;
+    .content {
+      padding: 0;
+      .img {
+        width: 320px;
+        padding: 80px 0;
+      }
+
+      .text {
+        margin-top: 0;
+  
+        strong {
+          @include font-x-l;
+        }
+  
+        p {
+          @include font-s2;
+        }
+      }
+    }
+  }
+}
+

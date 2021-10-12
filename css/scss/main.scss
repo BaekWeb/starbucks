@@ -4,9 +4,9 @@
 /* base - 기본스타일 */
 @import './base/font';
 @import './base/reset';
-@import './base/style';
+@import './base/style'; 
 
-/* helpers - 믹스인 */
+/* helpers - 믹스인 */  
 @import './helpers/mixin';
 
 /* layout - 컴포넌트나 페이지 레이아웃 */
@@ -15,6 +15,12 @@
 @import './layout/visual';
 @import './layout/news';
 @import './layout/promotion_info';
+@import './layout/rewards';
+@import './layout/bean';
+@import './layout/reserve';
+@import './layout/favorite';
+@import './layout/magazine';
+@import './layout/store';
 
 /* vander - 라이브러리 */
 @import './vander/swiper';

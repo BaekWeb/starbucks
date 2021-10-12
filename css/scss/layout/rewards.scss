@@ -1,0 +1,243 @@
+/*
+  rewards style
+*/
+.rewards {
+  background-color: #1e3932;
+
+  .content {
+    @include setFlex(flex,center,center);
+    padding: 30px 0;
+    color: $white;
+
+    h3 {
+      width: 175px;
+      margin: 0 40px;
+
+      img {
+        width: 100%;
+      }
+    }
+    > div {
+      flex: 1;
+      padding-right: 30px;
+
+      .info,
+      .giftCard {
+        .main {
+          flex: 1;
+          .pc,
+          .mo {
+            display: none;
+          }
+          p {
+            line-height: 24px;  
+          }
+        }
+        .button {
+          @include font-s2;
+          width: 185px;
+
+          a {
+            padding: 10px 20px;
+          }
+        }
+      }
+
+      // info
+      .info {
+        @include setFlex(flex, center, flex-end);
+        .main {
+          h4 {
+            @include font-x-l;
+            font-weight: 400;
+
+            span {
+              font-weight: 700;
+            }
+          }
+          p {
+            @include font-l;
+            margin-top: 20px;
+            font-weight: 400;
+            
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+        .button {
+          li {
+            display: inline-block;
+            border-radius: 5px;
+            
+            &:nth-child(1) {
+              margin-right: 5px;
+              border: 2px solid #00704a;
+              background-color: #00704a;
+            }
+            &:nth-child(2) {
+              border: 2px solid $white;
+            }
+          }
+        }
+      }
+      // info end
+      // giftCard
+      .giftCard {
+        @include setFlex(flex, center, center);
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,.2);
+        .main {
+          @include font-s2;
+
+          p {
+            width: 540px;
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+        .button {
+          border: 2px solid $white;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+      }
+      // giftCard end
+    }
+  }
+}
+
+// width - 641px ~ 1020px
+@media screen and (min-width: 641px) and (max-width: 1020px) {
+  .rewards {
+    .content {
+      align-items: flex-start;
+  
+      h3 {
+        flex: none;
+        width: 33%;
+        margin: 30px 40px 0 40px;
+
+        img {
+          width: auto;
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      }
+      > div {
+        .info,
+        .giftCard {
+          flex-flow: column;
+          align-items: flex-start;
+          .main {
+            .pc {
+              display: block;
+            }
+          }
+        }
+
+        // info
+        .info {
+          .button {
+            margin-top: 10px;
+          }
+        }
+        // info end
+        // giftCard
+        .giftCard {
+          .main {
+            p {
+              width: auto;
+            }
+          }
+          .button {
+            margin: 20px 0;
+          }
+        }
+        // giftCard end
+      }
+    }
+  }
+}
+
+// max-width - 640px
+@media screen and (max-width: 640px) {
+  .rewards {
+    .content {
+      flex-flow: column;
+  
+      h3 {
+        flex: none;
+        width: 40%;
+        margin: 20px 40px 0 40px;
+
+        img {
+          width: auto;
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      }
+      > div {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+  
+        .info,
+        .giftCard {
+          flex-flow: column;
+          align-items: center;
+          text-align: center;
+
+          .main {
+            .mo {
+              display: block;
+            }
+          }
+          .button {
+            width: 80%;
+            margin: 20px 0;
+  
+            a {
+              padding: 10px 20px;
+            }
+          }
+        }
+  
+        // info
+        .info {
+          .main {
+            h4 {
+              @include font-l;
+              margin-top: 30px;
+            }
+            p {
+              @include font-s2;
+            }
+          }
+          .button {
+            width: 80%;
+            margin-top: 20px;
+            li {
+              width: calc(50% - 10px);
+            }
+          }
+        }
+        // info end
+        // giftCard
+        .giftCard {
+          .main {
+            @include font-s2;
+  
+            p {
+              width: auto;
+            }
+          }
+        }
+        // giftCard end
+      }
+    }
+  }
+}
