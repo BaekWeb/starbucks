@@ -54,6 +54,7 @@
 
       strong {
         @include font-x-l;
+        display: block;
         font-weight: 400;
 
         span {
@@ -73,11 +74,13 @@
 
       .detail_btn {
         margin-top: 40px;
-        border-color: $white;
-
-        &:hover {
-          color: $black;
-          background-color: $white;
+        
+        a {
+          border-color: $white;
+          &:hover {
+            color: $black;
+            background-color: $white;
+          }
         }
       }
     }

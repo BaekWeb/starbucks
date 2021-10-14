@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -13,6 +14,7 @@
   <script src="./js/dropdown.js"></script>
   <script src="./js/search.js"></script>
   <script src="./js/news.js"></script>
+  <script src="./js/scroll.js"></script>
 
   <!-- swiper -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
@@ -1156,12 +1158,16 @@
     <!-- reserve - 새로운 커피 & 원두 출시-->
     <section class="reserve">
       <h2 class="title">새로운 커피 &amp; 원두 출시</h2>
+
+      <div class="bg">
+        <img src="./images/common/reserve_bolivia_bean.jpg" alt="리저브 배경이미지">
+        <img src="./images/common/m_reserve_bolivia_bean.jpg" alt="스타벅스 볼라비아 솔 데 라 마나나">
+      </div>
       
       <div class="content">
         <div class="main">
-          <div class="img">
+          <div class="titleImg">
             <img src="./images/common/reserve_bolivia_been_title.png" alt="스타벅스 볼라비아 솔 데 라 마나나">
-            <img src="./images/common/m_reserve_bolivia_bean.jpg" alt="스타벅스 볼라비아 솔 데 라 마나나">
           </div>
           <div class="detail_btn">
             <a href="#">자세히보기</a>
@@ -1261,7 +1267,7 @@
           <h2 class="title">메뉴</h2>
           <ul>
             <!-- CUSTOMER SERVICE & IDEAS -->
-            <li>
+            <li class="mo">
               <h3><a href="#">CUSTOMER SERVICE &amp; IDEAS</a></h3>
               
               <ul class="menuItem">
@@ -1332,14 +1338,23 @@
         </div>
         <div class="award">
           <h2 class="title">어워즈</h2>
-          <ul>
-            <li><img src="./images/icon/footer_award23.jpg" alt="여성가족부장관상 - 2020 대한민국 일자리대상"></li>
-            <li><img src="./images/icon/footer_award23.jpg" alt="행정안전부장관 표창 - 2020 소방의 날"></li>
-            <li><img src="./images/icon/footer_award23.jpg" alt="농림축산식품부 장관상 - 2020 대한민국 커피산업대상"></li>
-            <li><img src="./images/icon/footer_award23.jpg" alt="국회산업 통상 자원 중소벤처 위원회장상 - 2020 대한민국 중소중견기업혁신대상"></li>
-            <li><img src="./images/icon/footer_award23.jpg" alt="대통령직속 일자리위원회 부위원장상 - 2020 대한민국 일자리 유공 표창"></li>
-            <li><img src="./images/icon/footer_award23.jpg" alt="동반성장위원회 위원장상 - 2020 사랑나눔 사회공헌대상"></li>
-          </ul>
+          
+          <div class="main">
+            <div class="swiper awardSlide">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="./images/icon/footer_award23.jpg" alt="여성가족부장관상 - 2020 대한민국 일자리대상"></li>
+                <li class="swiper-slide"><img src="./images/icon/footer_award24.jpg" alt="행정안전부장관 표창 - 2020 소방의 날"></li>
+                <li class="swiper-slide"><img src="./images/icon/footer_award25.jpg" alt="농림축산식품부 장관상 - 2020 대한민국 커피산업대상"></li>
+                <li class="swiper-slide"><img src="./images/icon/footer_award26.jpg" alt="국회산업 통상 자원 중소벤처 위원회장상 - 2020 대한민국 중소중견기업혁신대상"></li>
+                <li class="swiper-slide"><img src="./images/icon/footer_award27.jpg" alt="대통령직속 일자리위원회 부위원장상 - 2020 대한민국 일자리 유공 표창"></li>
+                <li class="swiper-slide"><img src="./images/icon/footer_award28.jpg" alt="동반성장위원회 위원장상 - 2020 사랑나눔 사회공헌대상"></li>
+              </ul>
+            </div>
+
+            <div class="button">
+              <img src="./images/icon/footer_award_play.png" alt="stop play 버튼">
+            </div>
+          </div>
         </div>
         <div class="copyright">
           <ul class="mbn">
@@ -1369,6 +1384,13 @@
         </div>
       </div>
     </footer>
+    <!-- floating card -->
+    <div class="floating">
+      <a href="#">
+        <img src="./images/common/yJi9oh_20210930175203077.png" alt="PLCC 스타벅스 현대카드 10월 프로모션">
+        <img src="./images/common/yJi9oh_20210930175209452.png" alt="PLCC 스타벅스 현대카드 10월 프로모션">
+      </a>
+    </div>
   </main>
 </body>
 </html>

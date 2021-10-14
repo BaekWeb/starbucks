@@ -42,6 +42,7 @@
 
       img {
         width: 100%;
+        
         &:nth-child(2) {
           display: none;
         }
@@ -68,9 +69,11 @@
       .detail_btn {
         margin-top: 30px;
 
-        &:hover {
-          color: $white;
-          background-color: $black;
+        a {
+          &:hover {
+            color: $white;
+            background-color: $black;
+          }
         }
       }
     }

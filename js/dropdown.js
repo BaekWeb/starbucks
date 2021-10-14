@@ -76,4 +76,25 @@ $(function() {
         $(this).children("h4").addClass("icon");
     }
   })
+
+
+  // footer m dropdown
+  var footer = $(".footer");
+  var footerMenu = footer.find(".content .footerMenu");
+
+  footerMenu.find("ul > li").each(function () {
+    
+    $(this).children("h3").on("click", function (e) {
+      // 기본이벤트 제거
+      e.preventDefault();
+
+      if ($(this).is(".on") == true) {
+        $(this).removeClass("on").next(".menuItem").slideUp(500);
+      } else {
+        $(this).addClass("on").next(".menuItem").slideDown(500);
+      }
+      
+    })
+  })
+  // footer m dropdown end
 })

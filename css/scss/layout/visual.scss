@@ -9,6 +9,7 @@
 
   .content {
     position: relative;
+    height: 100%;
     padding: 0 0 0 50px;
 
     .text {
@@ -16,11 +17,13 @@
 
       .detail_btn {
         margin: 50px 110px;
-        border-color: #d5bea6;
-        color: #d5bea6;
-
-        &:hover {
-          background-color: rgba(255,255,255,0.3);
+        
+        a {
+          border-color: #d5bea6;
+          color: #d5bea6;
+          &:hover {
+            background-color: rgba(255,255,255,0.3);
+          }
         }
       }
     }
@@ -138,13 +141,20 @@
         position: static;
         width: 65%;
         padding: 15% 10%;
+
+        img {
+          width: 100%;
+        }
   
         .detail_btn {
           @include setPosition(absolute, auto,auto,5%,50%,990);
           transform: translate(-50%, 0);
           margin: 0;
-          border-color: #411711;
-          color: #411711;
+
+          a {
+            border-color: #411711;
+            color: #411711;
+          }
         }
       }
   
@@ -182,5 +192,48 @@
         }
       }
     }
+  }
+}
+
+
+// 애니메이션
+.visual {
+  .content {
+    .text > img,
+    .text > .detail_btn,
+    .menuImg > li {
+      opacity: 0;
+    }
+    .text {
+      img {
+        animation: ani 0.5s linear 0.5s forwards;
+      }
+
+      .detail_btn {
+        animation: ani 0.5s linear 2.5s forwards;
+      }
+    }
+    .menuImg {
+      li {
+        &:nth-child(1) {
+          animation: ani 0.5s linear 1s forwards;
+        }
+        &:nth-child(2) {
+          animation: ani 0.5s linear 1.5s forwards;
+        }
+        &:nth-child(3) {
+          animation: ani 0.5s linear 2s forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

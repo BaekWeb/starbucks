@@ -23,10 +23,12 @@
 
       .detail_btn {
         margin: 40px 0 0 290px;
-  
-        &:hover {
-          color: $white;
-          background-color: $black;
+        
+        a {
+          &:hover {
+            color: $white;
+            background-color: $black;
+          }
         }
       }
     }
@@ -62,11 +64,6 @@
   
         .detail_btn {
           margin: 40px 0 0 250px;
-    
-          &:hover {
-            color: $white;
-            background-color: $black;
-          }
         }
       }
       .img {
